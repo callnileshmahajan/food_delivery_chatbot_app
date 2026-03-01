@@ -79,7 +79,7 @@ def build_sql_agent() -> Any:
     # 1) LLM
     MODEL = "llama-3.3-70b-versatile"
     # Get the API key from Colab secrets
-    groq_api_key = userdata.get('GROQ_API_KEY')
+    groq_api_key = os.getenv('GROQ_API_KEY')
 
     #llama-3.3-70b-versatile
     # Low creativity (deterministic) LLM
